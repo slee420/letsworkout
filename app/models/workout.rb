@@ -11,4 +11,6 @@
 #  updated_at    :datetime         not null
 #
 class Workout < ApplicationRecord
+  belongs_to :workout
+  has_many :exercises
 end
