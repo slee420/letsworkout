@@ -27,8 +27,6 @@ Rails.application.routes.draw do
              
   #------------------------------
 
-  get("/", { :controller => "exercises", :action => "index" })
-
   # Routes for the Exercise resource:
 
   # CREATE
@@ -65,6 +63,9 @@ Rails.application.routes.draw do
   # DELETE
   get("/delete_workout/:path_id", { :controller => "workouts", :action => "destroy" })
 
-  #------------------------------
+  #-Routes for Summary
+  get("/summary", { :controller => "summary", :action => "display"})
+  get("/", { :controller => "summary", :action => "display"})
+
 
 end
