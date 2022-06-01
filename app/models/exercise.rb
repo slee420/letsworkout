@@ -13,4 +13,5 @@
 #  workout_id    :integer
 #
 class Exercise < ApplicationRecord
+  
 end
