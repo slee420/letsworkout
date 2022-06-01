@@ -1,0 +1,134 @@
+<div>
+  <div>
+    <h1>
+      List of all workouts
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new workout
+    </h2>
+
+    <form action="/insert_workout" method="post">
+      <div>
+        <label for="date_box">
+          Date
+        </label>
+
+        <input type="date" id="date_box" name="query_date">
+      </div>
+
+      <div>
+        <label for="muscle_target_box">
+          Muscle target
+        </label>
+
+        <input type="text" id="muscle_target_box" name="query_muscle_target">
+      </div>
+
+      <div>
+        <label for="quality_box">
+          Quality
+        </label>
+
+        <input type="text" id="quality_box" name="query_quality">
+      </div>
+
+      <div>
+        <label for="location_box">
+          Location
+        </label>
+
+        <input type="text" id="location_box" name="query_location">
+      </div>
+
+      <button>
+        Create workout
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Date
+        </th>
+
+        <th>
+          Muscle target
+        </th>
+
+        <th>
+          Quality
+        </th>
+
+        <th>
+          Location
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_workouts.each do |a_workout| %>
+      <tr>
+        <td>
+          <%= a_workout.id %>
+        </td>
+
+        <td>
+          <%= a_workout.date %>
+        </td>
+
+        <td>
+          <%= a_workout.muscle_target %>
+        </td>
+
+        <td>
+          <%= a_workout.quality %>
+        </td>
+
+        <td>
+          <%= a_workout.location %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_workout.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_workout.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/workouts/<%= a_workout.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

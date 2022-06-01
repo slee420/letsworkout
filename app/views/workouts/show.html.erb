@@ -1,0 +1,116 @@
+<div>
+  <div>
+    <h1>
+      Workout #<%= @the_workout.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/workouts">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_workout/<%= @the_workout.id %>">
+          Delete workout
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Date
+      </dt>
+      <dd>
+        <%= @the_workout.date %>
+      </dd>
+
+      <dt>
+        Muscle target
+      </dt>
+      <dd>
+        <%= @the_workout.muscle_target %>
+      </dd>
+
+      <dt>
+        Quality
+      </dt>
+      <dd>
+        <%= @the_workout.quality %>
+      </dd>
+
+      <dt>
+        Location
+      </dt>
+      <dd>
+        <%= @the_workout.location %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_workout.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_workout.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit workout
+    </h2>
+
+    <form action="/modify_workout/<%= @the_workout.id %>"  method="post" >
+      <div>
+        <label for="date_box">
+          Date
+        </label>
+
+        <input type="date" id="date_box" name="query_date" value="<%= @the_workout.date %>">
+      </div>
+
+      <div>
+        <label for="muscle_target_box">
+          Muscle target
+        </label>
+
+        <input type="text" id="muscle_target_box" name="query_muscle_target" value="<%= @the_workout.muscle_target %>">
+      </div>
+
+      <div>
+        <label for="quality_box">
+          Quality
+        </label>
+
+        <input type="text" id="quality_box" name="query_quality" value="<%= @the_workout.quality %>">
+      </div>
+
+      <div>
+        <label for="location_box">
+          Location
+        </label>
+
+        <input type="text" id="location_box" name="query_location" value="<%= @the_workout.location %>">
+      </div>
+
+      <button>
+        Update workout
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
