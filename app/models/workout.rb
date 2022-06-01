@@ -13,4 +13,6 @@
 class Workout < ApplicationRecord
   belongs_to :workout
   has_many :exercises
+  validates(:date,:muscle_target,:quality,:location , { :presence => true })
+  
 end

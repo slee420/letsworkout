@@ -14,4 +14,5 @@
 #
 class Exercise < ApplicationRecord
   belongs_to :workout
+  validates(:exercise_name,:weight,:reps,:sets, {:presence => true} )
 end
