@@ -15,4 +15,7 @@ class Workout < ApplicationRecord
   has_many :exercises
   validates(:date,:muscle_target,:quality,:location , { :presence => true })
   
+  def own_exercises
+    return Exercise.where({ :workout_id => self.id })
+  end
 end

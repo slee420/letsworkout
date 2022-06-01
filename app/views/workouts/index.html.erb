@@ -14,6 +14,7 @@
       Add a new workout
     </h2>
 
+
     <form action="/insert_workout" method="post">
       <div>
         <label for="date_box">
@@ -28,7 +29,7 @@
           Muscle target
         </label>
 
-        <input type="text" id="muscle_target_box" name="query_muscle_target">
+        <input type="text" id="muscle_target_box" name="query_muscle_target" placeholder="What was your focus area?">
       </div>
 
       <div>
@@ -36,7 +37,7 @@
           Quality
         </label>
 
-        <input type="text" id="quality_box" name="query_quality">
+        <input type="integer" id="quality_box" name="query_quality" placeholder="Scale 1 (Low) - 5 (High)">
       </div>
 
       <div>
@@ -44,7 +45,7 @@
           Location
         </label>
 
-        <input type="text" id="location_box" name="query_location">
+        <input type="text" id="location_box" name="query_location" placeholder="Where'd you workout?">
       </div>
 
       <button>

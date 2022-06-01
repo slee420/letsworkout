@@ -4,10 +4,10 @@ Summary of Workouts
 </h2>
 
 <p>
-Total Number of Workouts Performed: 
+Total Number of Workouts Performed: <%= @workouts.count %>
 </p>
 <p>
-Total Number of Exercises Performed:
+Total Number of Exercises Performed: <%= @exercises.count %>
 </p>
 <p>
 Total Number of Reps Performed: 
@@ -15,7 +15,9 @@ Total Number of Reps Performed:
 <p>
 Total Number of Sets Performed: 
 </p>
-
+<p>
+Last Workout Date: <%= @list_of_workouts.at(0).date %>
+</p>
 
 
 <h2>
