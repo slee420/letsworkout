@@ -1,13 +1,16 @@
 <div>
   <div>
     <h1>
-      List of All Exercises
+      All User Exercises
     </h1>
   </div>
 </div>
 
 <hr>
 
+<% if session.fetch(:user_id) == nil %>
+Sign up or sign in above to add your exercises!
+<% else %>
 <div>
   <div>
     <h2>
@@ -81,6 +84,7 @@
     </form>
   </div>
 </div>
+<% end %>
 
 <hr>
 <div>

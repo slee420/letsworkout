@@ -1,13 +1,15 @@
 <div>
   <div>
     <h1>
-      List of All Workouts
+      All User Workouts
     </h1>
   </div>
 </div>
 
 <hr>
-
+<% if session.fetch(:user_id) == nil %>
+Sign up or sign in above to add your workouts!
+<% else %>
 <div>
   <div>
     <h2>
@@ -57,7 +59,7 @@
     </form>
   </div>
 </div>
-
+<% end %>
 <hr>
 <div>
   <div>

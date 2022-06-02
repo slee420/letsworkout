@@ -14,14 +14,14 @@
 class Workout < ApplicationRecord
   #belongs_to :workout
   has_many :exercises
-  validates(:date,:muscle_target,:quality,:location , { :presence => true })
+  validates(:date,:muscle_target,:quality,:location,:user_id, { :presence => true })
   validates :quality, numericality: { less_than_or_equal_to: 5 , greater_than_or_equal_to: 1}
   validates :quality, numericality: { only_integer: true}
-  #validates :date, numericality: {less_than_or_equal_to: Date.today}
+  validate :workout_cannot_be_in_the_future
 
   def workout_cannot_be_in_the_future
-    if :date > Date.today
-      errors.add(:date, "can't be in the future")
+    if :date.to_s > Date.today.to_s
+      errors.add(:date, "cannot be in the future")
     end
   end
   

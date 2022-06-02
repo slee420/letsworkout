@@ -1,6 +1,6 @@
 
 <h2>
-<%= @current_user.first_name %>'s Summary of Workouts
+<%= @current_user.first_name.capitalize %>'s Summary of Workouts
 </h2>
 
 <p>
@@ -16,7 +16,7 @@ Total Number of Reps Performed:
 Total Number of Sets Performed: 
 </p>
 <p>
-Last Workout Date: <%= @list_of_workouts.at(0).date %>
+Last Workout Date: <%= @list_of_workouts.at(0).date.strftime("%b %d, %Y") %>
 </p>
 
 
@@ -69,7 +69,7 @@ Last Workout Date: <%= @list_of_workouts.at(0).date %>
 
 
         <td>
-          <%= a_workout.date %>
+          <%= a_workout.date.strftime("%m/%d/%Y") %>
         </td>
 
         <td>

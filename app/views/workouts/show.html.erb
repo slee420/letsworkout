@@ -4,12 +4,8 @@
       <%= @the_workout.muscle_target %> Workout on <%= @the_workout.date.strftime("%b %d, %Y") %> Details
     </h1>
 
-    <div>
-      <div>
-        <a href="/workouts">
-          Go back
-        </a>
-      </div>
+  
+        <%= link_to 'Go Back', :back %>
 
       <div>
         <a href="/delete_workout/<%= @the_workout.id %>">
@@ -179,4 +175,3 @@
   <% end %>
 
 <hr>
-
