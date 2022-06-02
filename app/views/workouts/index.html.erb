@@ -1,7 +1,7 @@
 <div>
   <div>
     <h1>
-      List of all workouts
+      List of All Workouts
     </h1>
   </div>
 </div>
@@ -11,7 +11,7 @@
 <div>
   <div>
     <h2>
-      Add a new workout
+      Add a New Workout!
     </h2>
 
 
@@ -29,7 +29,7 @@
 
       <div>
         <label for="muscle_target_box">
-          Muscle target
+          Muscle Target
         </label>
 
         <input type="text" id="muscle_target_box" name="query_muscle_target" placeholder="What was your focus area?">
@@ -52,7 +52,7 @@
       </div>
 
       <button>
-        Create workout
+        Create Workout
       </button>
     </form>
   </div>
@@ -112,7 +112,7 @@
         </td>
 
         <td>
-          <%= a_workout.date %>
+          <%= a_workout.date.strftime("%m/%d/%Y") %>
         </td>
 
         <td>

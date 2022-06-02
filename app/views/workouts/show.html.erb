@@ -1,7 +1,7 @@
 <div>
   <div>
     <h1>
-      Workout #<%= @the_workout.id %> details
+      <%= @the_workout.muscle_target %> Workout on <%= @the_workout.date.strftime("%b %d, %Y") %> Details
     </h1>
 
     <div>
@@ -23,11 +23,11 @@
         Date
       </dt>
       <dd>
-        <%= @the_workout.date %>
+        <%= @the_workout.date.strftime("%b %d, %Y") %>
       </dd>
 
       <dt>
-        Muscle target
+        Muscle Target
       </dt>
       <dd>
         <%= @the_workout.muscle_target %>
@@ -37,7 +37,7 @@
         Quality
       </dt>
       <dd>
-        <%= @the_workout.quality %>
+        <%= @the_workout.quality %> out of 5
       </dd>
 
       <dt>
@@ -70,7 +70,7 @@
 <div>
   <div>
     <h2>
-      Edit workout
+      Edit Workout
     </h2>
 
     <form action="/modify_workout/<%= @the_workout.id %>"  method="post" >
@@ -107,7 +107,7 @@
       </div>
 
       <button>
-        Update workout
+        Update Workout
       </button>
     </form>
   </div>
@@ -139,11 +139,43 @@
     <th>
       Description
     </th>
-        <th>
-      Show Details Link
+    <th>
+   
     </th>
   </tr>
 
+  <% @exercises.each do |exercise| %>
+  <tr>
 
+    <td>
+      <%= exercise.id %>
+    </td>
+
+    <td>
+      <%= exercise.exercise_name %>
+    </td>
+
+    <td>
+      <%= exercise.weight %>
+    </td>
+        <td>
+      <%= exercise.reps %>
+    </td>
+
+        <td>
+      <%= exercise.sets %>
+    </td>
+
+        <td>
+      <%= exercise.description %>
+    </td>
+    <td>
+      <a href="/exercises/<%= exercise.id %>">
+        Show Details
+      </a>
+    </td>
+  </tr>
+
+  <% end %>
 
 <hr>

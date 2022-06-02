@@ -1,19 +1,19 @@
 <div>
   <div>
     <h1>
-      Exercise #<%= @the_exercise.id %> details
+      <%= @the_exercise.exercise_name %> Exercise Details
     </h1>
 
     <div>
       <div>
         <a href="/exercises">
-          Go back
+          Go Back
         </a>
       </div>
 
       <div>
         <a href="/delete_exercise/<%= @the_exercise.id %>">
-          Delete exercise
+          Delete Exercise
         </a>
       </div>
     </div>
@@ -23,11 +23,11 @@
         Workout
       </dt>
       <dd>
-        <%= @the_exercise.workout_id %>
+        <%= @the_exercise.workout.muscle_target %> on <%= @the_exercise.workout.date.strftime("%b %d, %Y") %>
       </dd>
 
       <dt>
-        Exercise name
+        Exercise Name
       </dt>
       <dd>
         <%= @the_exercise.exercise_name %>
@@ -84,7 +84,7 @@
 <div>
   <div>
     <h2>
-      Edit exercise
+      Edit Exercise
     </h2>
 
     <form action="/modify_exercise/<%= @the_exercise.id %>"  method="post" >
@@ -98,7 +98,7 @@
 
       <div>
         <label for="exercise_name_box">
-          Exercise name
+          Exercise Name
         </label>
 
         <input type="text" id="exercise_name_box" name="query_exercise_name" value="<%= @the_exercise.exercise_name %>">
@@ -137,7 +137,7 @@
       </div>
 
       <button>
-        Update exercise
+        Update Exercise
       </button>
     </form>
   </div>

@@ -14,6 +14,9 @@ class WorkoutsController < ApplicationController
 
     @the_workout = matching_workouts.at(0)
 
+    @exercises = Exercise.where({ :workout_id => the_id })
+
+
     render({ :template => "workouts/show.html.erb" })
   end
 

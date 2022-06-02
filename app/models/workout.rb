@@ -15,6 +15,15 @@ class Workout < ApplicationRecord
   #belongs_to :workout
   has_many :exercises
   validates(:date,:muscle_target,:quality,:location , { :presence => true })
+  validates :quality, numericality: { less_than_or_equal_to: 5 , greater_than_or_equal_to: 1}
+  validates :quality, numericality: { only_integer: true}
+  #validates :date, numericality: {less_than_or_equal_to: Date.today}
+
+  def workout_cannot_be_in_the_future
+    if :date > Date.today
+      errors.add(:date, "can't be in the future")
+    end
+  end
   
   def owner
     return User.where({ :id => self.user_id }).at(0)
