@@ -1,7 +1,9 @@
+
+
 <div>
   <div>
     <h1>
-      All User Workouts
+     <i class="fa-solid fa-dumbbell"></i> All User Workouts <i class="fa-solid fa-dumbbell"></i>
     </h1>
   </div>
 </div>
@@ -23,7 +25,7 @@ Sign up or sign in above to add your workouts!
 
       <div>
         <label for="date_box">
-          Date
+          <i class="fa-regular fa-calendar-days"></i> Date
         </label>
 
         <input type="date" id="date_box" name="query_date">
@@ -31,7 +33,7 @@ Sign up or sign in above to add your workouts!
 
       <div>
         <label for="muscle_target_box">
-          Muscle Target
+          <i class="fa-solid fa-bullseye"></i> Muscle Target
         </label>
 
         <input type="text" id="muscle_target_box" name="query_muscle_target" placeholder="What was your focus area?">
@@ -39,7 +41,7 @@ Sign up or sign in above to add your workouts!
 
       <div>
         <label for="quality_box">
-          Quality
+          <i class="fa-solid fa-chart-line"></i> Quality
         </label>
 
         <input type="integer" id="quality_box" name="query_quality" placeholder="Scale 1 (Low) - 5 (High)">
@@ -47,7 +49,7 @@ Sign up or sign in above to add your workouts!
 
       <div>
         <label for="location_box">
-          Location
+          <i class="fa-solid fa-location-pin"></i> Location
         </label>
 
         <input type="text" id="location_box" name="query_location" placeholder="Where'd you workout?">
@@ -76,7 +78,7 @@ Sign up or sign in above to add your workouts!
         </th>
 
         <th>
-          Muscle target
+          Muscle Target
         </th>
 
         <th>
@@ -88,14 +90,7 @@ Sign up or sign in above to add your workouts!
         </th>
 
         <th>
-          Created at
-        </th>
-
-        <th>
-          Updated at
-        </th>
-
-        <th>
+          Details
         </th>
       </tr>
 
@@ -123,13 +118,6 @@ Sign up or sign in above to add your workouts!
 
         <td>
           <%= a_workout.location %>
-        </td>
-
-        <td>
-          <%= time_ago_in_words(a_workout.created_at) %> ago
-        </td>
-        <td>
-          <%= time_ago_in_words(a_workout.updated_at) %> ago
         </td>
 
         <td>

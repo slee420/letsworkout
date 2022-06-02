@@ -24,7 +24,7 @@ Sign up or sign in above to add your exercises!
 
       <div>
         <label for="workout_id_box">
-          Workout
+          <i class="fa-solid fa-dumbbell"></i> Workout
         </label>
 
         
@@ -40,7 +40,7 @@ Sign up or sign in above to add your exercises!
 
       <div>
         <label for="exercise_name_box">
-          Exercise Name
+          <i class="fa-solid fa-list-check"></i> Exercise Name
         </label>
 
         <input type="text" id="exercise_name_box" name="query_exercise_name">
@@ -48,7 +48,7 @@ Sign up or sign in above to add your exercises!
 
       <div>
         <label for="weight_box">
-          Weight
+          <i class="fa-solid fa-gears"></i> Weight
         </label>
 
         <input type="text" id="weight_box" name="query_weight">
@@ -56,7 +56,7 @@ Sign up or sign in above to add your exercises!
 
       <div>
         <label for="reps_box">
-          Reps
+          <i class="fa-solid fa-hammer"></i> Reps
         </label>
 
         <input type="text" id="reps_box" name="query_reps">
@@ -64,7 +64,7 @@ Sign up or sign in above to add your exercises!
 
       <div>
         <label for="sets_box">
-          Sets
+          <i class="fa-solid fa-calculator"></i> Sets
         </label>
 
         <input type="text" id="sets_box" name="query_sets">
@@ -72,7 +72,7 @@ Sign up or sign in above to add your exercises!
 
       <div>
         <label for="description_box">
-          Description
+          <i class="fa-solid fa-book"></i> Description
         </label>
 
         <input type="text" id="description_box" name="query_description">
@@ -121,14 +121,7 @@ Sign up or sign in above to add your exercises!
         </th>
 
         <th>
-          Created at
-        </th>
-
-        <th>
-          Updated at
-        </th>
-
-        <th>
+          Details
         </th>
       </tr>
 
@@ -165,12 +158,6 @@ Sign up or sign in above to add your exercises!
           <%= an_exercise.description %>
         </td>
 
-        <td>
-          <%= time_ago_in_words(an_exercise.created_at) %> ago
-        </td>
-        <td>
-          <%= time_ago_in_words(an_exercise.updated_at) %> ago
-        </td>
 
         <td>
           <a href="/exercises/<%= an_exercise.id %>">

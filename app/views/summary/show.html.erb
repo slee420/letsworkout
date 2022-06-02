@@ -3,28 +3,28 @@
 <%= @current_user.first_name.capitalize %>'s Summary of Workouts
 </h2>
 
-<p>
-Total Number of Workouts Performed: <%= @workouts.count %>
-</p>
-<p>
-Number of Workouts Performed Last Week: <%= @list_of_workouts.where({ :date => (1.week.ago..Date.today) }).count %>
-</p>
-<p>
-Number of Workouts Performed Two Weeks Ago: <%= @list_of_workouts.where({ :date => (1.week.ago..Date.today) }).count %>
-</p>
+<h4>
+<i class="fa-solid fa-dumbbell"></i> Total Number of Workouts Performed: <%= @workouts.count %>
+</h4>
+<h4>
+<i class="fa-solid fa-calendar-week"></i> Number of Workouts Performed Last Week: <%= @list_of_workouts.where({ :date => (1.week.ago..Date.today) }).count %>
+</h4>
+<h4>
+<i class="fa-solid fa-calendar-days"></i> Number of Workouts Performed Two Weeks Ago: <%= @list_of_workouts.where({ :date => (1.week.ago..Date.today) }).count %>
+</h4>
 
-<p>
-Total Number of Exercises Performed: <%= @exercises.count %>
-</p>
-<p>
-Total Number of Reps Performed: <%= @current_user.exercises.sum(:reps) %>
-</p>
-<p>
-Total Number of Sets Performed: <%= @current_user.exercises.sum(:sets) %>
-</p>
-<p>
-Last Workout Date: <%= @list_of_workouts.at(0).date.strftime("%b %d, %Y") %>
-</p>
+<h4>
+<i class="fa-solid fa-list-check"></i> Total Number of Exercises Performed: <%= @exercises.count %>
+</h4>
+<h4>
+<i class="fa-solid fa-hammer"></i> Total Number of Reps Performed: <%= @current_user.exercises.sum(:reps) %>
+</h4>
+<h4>
+<i class="fa-solid fa-calculator"></i> Total Number of Sets Performed: <%= @current_user.exercises.sum(:sets) %>
+</h4>
+<h4>
+<i class="fa-solid fa-backward-fast"></i> Last Workout Date: <%= @list_of_workouts.at(0).date.strftime("%b %d, %Y") %>
+</h4>
 
 
 <hr>
@@ -42,7 +42,7 @@ Last Workout Date: <%= @list_of_workouts.at(0).date.strftime("%b %d, %Y") %>
         </th>
 
         <th>
-          Muscle target
+          Muscle Target
         </th>
 
         <th>
@@ -93,7 +93,7 @@ Last Workout Date: <%= @list_of_workouts.at(0).date.strftime("%b %d, %Y") %>
 
         <td>
           <a href="/workouts/<%= a_workout.id %>">
-            Show details
+            Show Details
           </a>
         </td>
       </tr>
