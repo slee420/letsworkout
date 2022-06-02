@@ -12,6 +12,7 @@ namespace :slurp do
           w = Workout.new
 
           w.id = row["id"]
+          w.user_id = row["user_id"]
           w.date = Date.strptime(row["date"], "%d/%m/%Y")
           
           w.muscle_target = row["Muscle Target"]

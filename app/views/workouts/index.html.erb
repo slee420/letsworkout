@@ -65,6 +65,10 @@
         </th>
 
         <th>
+          User
+        </th>
+
+        <th>
           Date
         </th>
 
@@ -96,6 +100,10 @@
       <tr>
         <td>
           <%= a_workout.id %>
+        </td>
+
+        <td>
+          <%= a_workout.owner.first_name.capitalize %> <%= a_workout.owner.last_name.capitalize %>
         </td>
 
         <td>

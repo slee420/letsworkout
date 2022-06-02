@@ -1,30 +1,30 @@
-id,date,Muscle Target,Quality,Location
-1,1/5/2022,Abs,4,Chicago Loop LA Fitness
-2,2/5/2022,Back/Bicep,5,Chicago Loop LA Fitness
-3,3/5/2022,Shoulders,5,Chicago Loop LA Fitness
-4,4/5/2022,Leg,5,Chicago Loop LA Fitness
-5,5/5/2022,Chest/Triceps,4,Chicago Loop LA Fitness
-6,6/5/2022,Back/Bicep,4,Chicago Loop LA Fitness
-7,7/5/2022,Shoulders,3,Chicago Loop LA Fitness
-8,8/5/2022,Abs,4,Chicago Loop LA Fitness
-9,9/5/2022,Leg,4,Chicago Loop LA Fitness
-10,10/5/2022,Chest/Triceps,4,Chicago Loop LA Fitness
-11,11/5/2022,Abs,2,Chicago Loop LA Fitness
-12,12/5/2022,Back/Bicep,5,Chicago Loop LA Fitness
-13,13/5/2022,Shoulders,5,Chicago Loop LA Fitness
-14,15/5/2022,Leg,3,Chicago Loop LA Fitness
-15,16/5/2022,Chest/Triceps,4,Chicago Loop LA Fitness
-16,17/5/2022,Back/Bicep,4,Chicago Loop LA Fitness
-17,18/5/2022,Shoulders,4,Chicago Loop LA Fitness
-18,19/5/2022,Leg,4,Chicago Loop LA Fitness
-19,21/5/2022,Chest/Triceps,3,Chicago Loop LA Fitness
-20,22/5/2022,Abs,2,Chicago South Loop LA Fitness
-21,23/5/2022,Back/Bicep,3,Chicago Loop LA Fitness
-22,24/5/2022,Shoulders,4,Chicago Loop LA Fitness
-23,26/5/2022,Leg,5,Chicago Loop LA Fitness
-24,27/5/2022,Chest/Triceps,5,Chicago Loop LA Fitness
-25,28/5/2022,Back/Bicep,3,Chicago Loop LA Fitness
-26,29/5/2022,Shoulders,5,Chicago Loop LA Fitness
-27,30/5/2022,Abs,2,Chicago MPP Gym
-28,31/5/2022,Leg,3,Chicago Loop LA Fitness
-29,1/6/2022,Chest/Triceps,4,Chicago Loop LA Fitness
+id,user_id,date,Muscle Target,Quality,Location
+1,1,1/5/2022,Abs,4,Chicago Loop LA Fitness
+2,1,2/5/2022,Back/Bicep,5,Chicago Loop LA Fitness
+3,1,3/5/2022,Shoulders,5,Chicago Loop LA Fitness
+4,1,4/5/2022,Leg,5,Chicago Loop LA Fitness
+5,1,5/5/2022,Chest/Triceps,4,Chicago Loop LA Fitness
+6,1,6/5/2022,Back/Bicep,4,Chicago Loop LA Fitness
+7,1,7/5/2022,Shoulders,3,Chicago Loop LA Fitness
+8,1,8/5/2022,Abs,4,Chicago Loop LA Fitness
+9,1,9/5/2022,Leg,4,Chicago Loop LA Fitness
+10,1,10/5/2022,Chest/Triceps,4,Chicago Loop LA Fitness
+11,1,11/5/2022,Abs,2,Chicago Loop LA Fitness
+12,1,12/5/2022,Back/Bicep,5,Chicago Loop LA Fitness
+13,1,13/5/2022,Shoulders,5,Chicago Loop LA Fitness
+14,1,15/5/2022,Leg,3,Chicago Loop LA Fitness
+15,1,16/5/2022,Chest/Triceps,4,Chicago Loop LA Fitness
+16,1,17/5/2022,Back/Bicep,4,Chicago Loop LA Fitness
+17,1,18/5/2022,Shoulders,4,Chicago Loop LA Fitness
+18,1,19/5/2022,Leg,4,Chicago Loop LA Fitness
+19,1,21/5/2022,Chest/Triceps,3,Chicago Loop LA Fitness
+20,1,22/5/2022,Abs,2,Chicago South Loop LA Fitness
+21,1,23/5/2022,Back/Bicep,3,Chicago Loop LA Fitness
+22,1,24/5/2022,Shoulders,4,Chicago Loop LA Fitness
+23,1,26/5/2022,Leg,5,Chicago Loop LA Fitness
+24,1,27/5/2022,Chest/Triceps,5,Chicago Loop LA Fitness
+25,1,28/5/2022,Back/Bicep,3,Chicago Loop LA Fitness
+26,1,29/5/2022,Shoulders,5,Chicago Loop LA Fitness
+27,1,30/5/2022,Abs,2,Chicago MPP Gym
+28,1,31/5/2022,Leg,3,Chicago Loop LA Fitness
+29,1,1/6/2022,Chest/Triceps,4,Chicago Loop LA Fitness
