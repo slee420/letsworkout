@@ -29,7 +29,7 @@ Sign up or sign in above to add your exercises!
 
         
         <select name="query_workout_id">
-          <% Workout.all.order({ :id => :desc}).each do |a_workout| %>
+          <% Workout.where({ :user_id => session.fetch(:user_id)}).order({ :id => :desc}).each do |a_workout| %>
             <option>
               <%= a_workout.date.strftime("%m/%d/%Y") %>: <%= a_workout.muscle_target %>
             </option>
@@ -79,7 +79,7 @@ Sign up or sign in above to add your exercises!
       </div>
 
       <button>
-        Add exercise
+        Add Exercise
       </button>
     </form>
   </div>

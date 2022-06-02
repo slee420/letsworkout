@@ -1,8 +1,7 @@
 class ExercisesController < ApplicationController
   def index
-    matching_exercises = Exercise.all
 
-    @list_of_exercises = matching_exercises.order({ :created_at => :desc })
+    @list_of_exercises = Exercise.all.order({ :date => :desc })
 
     render({ :template => "exercises/index.html.erb" })
   end
