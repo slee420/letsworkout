@@ -47,6 +47,7 @@ csv.each do |row|
     e.reps = row["Reps"]
     e.sets = row["Set"]
     e.description = row["Description"]
+    e.user_id = row["user_id"]
     e.save
     puts "#{e.exercise_name}, #{e.workout_id} saved"
   end

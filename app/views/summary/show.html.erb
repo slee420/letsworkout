@@ -7,7 +7,7 @@
 Total Number of Workouts Performed: <%= @workouts.count %>
 </p>
 <p>
-Total Number of Exercises Performed: <%#= @exercises.count %>
+Total Number of Exercises Performed: <%= @exercises.count %>
 </p>
 <p>
 Total Number of Reps Performed: 
@@ -20,22 +20,17 @@ Last Workout Date: <%= @list_of_workouts.at(0).date %>
 </p>
 
 
-<h2>
-Heaviest Lifts (Weight) by Exercise
-</h2>
-
 <hr>
 <div>
   <div>
     <table border="1">
+    <h2> All Workouts</h2>
       <tr>
         <th>
           ID
         </th>
 
-        <th>
-          User
-        </th>
+
 
         <th>
           Date
@@ -71,11 +66,7 @@ Heaviest Lifts (Weight) by Exercise
           <%= a_workout.id %>
         </td>
 
-        <td>
-          <%#= a_workout.user_id %> 
-          <%= a_workout.owner.first_name.capitalize %> <%= a_workout.owner.last_name.capitalize %>
 
-        </td>
 
         <td>
           <%= a_workout.date %>
