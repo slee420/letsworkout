@@ -16,6 +16,9 @@
 
 
     <form action="/insert_workout" method="post">
+
+      <input type="hidden" name="user_id" value="<%= session.fetch(:user_id) %>" >
+
       <div>
         <label for="date_box">
           Date
@@ -103,7 +106,9 @@
         </td>
 
         <td>
+          <%#= a_workout.user_id %> 
           <%= a_workout.owner.first_name.capitalize %> <%= a_workout.owner.last_name.capitalize %>
+
         </td>
 
         <td>

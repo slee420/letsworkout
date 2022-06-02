@@ -65,7 +65,7 @@ Rails.application.routes.draw do
 
   #-Routes for Summary
   get("/summary", { :controller => "summary", :action => "display"})
-  get("/", { :controller => "summary", :action => "display"})
+  get("/", { :controller => "workouts", :action => "index"})
 
 
 end

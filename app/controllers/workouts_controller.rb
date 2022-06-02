@@ -20,6 +20,7 @@ class WorkoutsController < ApplicationController
   def create
     the_workout = Workout.new
     the_workout.date = params.fetch("query_date")
+    the_workout.user_id = params.fetch("user_id")
     the_workout.muscle_target = params.fetch("query_muscle_target")
     the_workout.quality = params.fetch("query_quality")
     the_workout.location = params.fetch("query_location")
