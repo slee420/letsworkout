@@ -16,7 +16,7 @@
 class Exercise < ApplicationRecord
   belongs_to :workout
   validates(:exercise_name,:weight,:reps,:sets,:user_id, {:presence => true} )
-  validates(:weight,:reps,:sets, {:presence => true} )
+  validates(:weight,:reps,:sets,:user_id, {:presence => true} )
   validates :weight,:reps,:sets, numericality: { only_integer: true}
 
 end

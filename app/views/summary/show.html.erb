@@ -7,13 +7,20 @@
 Total Number of Workouts Performed: <%= @workouts.count %>
 </p>
 <p>
+Number of Workouts Performed Last Week: <%= @list_of_workouts.where({ :date => (1.week.ago..Date.today) }).count %>
+</p>
+<p>
+Number of Workouts Performed Two Weeks Ago: <%= @list_of_workouts.where({ :date => (1.week.ago..Date.today) }).count %>
+</p>
+
+<p>
 Total Number of Exercises Performed: <%= @exercises.count %>
 </p>
 <p>
-Total Number of Reps Performed: 
+Total Number of Reps Performed: <%= @current_user.exercises.sum(:reps) %>
 </p>
 <p>
-Total Number of Sets Performed: 
+Total Number of Sets Performed: <%= @current_user.exercises.sum(:sets) %>
 </p>
 <p>
 Last Workout Date: <%= @list_of_workouts.at(0).date.strftime("%b %d, %Y") %>
@@ -26,9 +33,7 @@ Last Workout Date: <%= @list_of_workouts.at(0).date.strftime("%b %d, %Y") %>
     <table border="1">
     <h2> All Workouts</h2>
       <tr>
-        <th>
-          ID
-        </th>
+ 
 
 
 
@@ -62,11 +67,6 @@ Last Workout Date: <%= @list_of_workouts.at(0).date.strftime("%b %d, %Y") %>
 
       <% @list_of_workouts.each do |a_workout| %>
       <tr>
-        <td>
-          <%= a_workout.id %>
-        </td>
-
-
 
         <td>
           <%= a_workout.date.strftime("%m/%d/%Y") %>

@@ -20,6 +20,8 @@ class ExercisesController < ApplicationController
   def create
     the_exercise = Exercise.new
     the_exercise.workout_id = params.fetch("query_workout_id")
+    the_exercise.user_id = params.fetch("user_id")
+
     the_exercise.exercise_name = params.fetch("query_exercise_name")
     the_exercise.weight = params.fetch("query_weight")
     the_exercise.reps = params.fetch("query_reps")

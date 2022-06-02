@@ -1,7 +1,7 @@
 <div>
   <div>
     <h1>
-      <%= @the_exercise.exercise_name %> Exercise Details
+      <%= @the_exercise.exercise_name.capitalize %> Exercise Details
     </h1>
 
     <div>
@@ -88,13 +88,7 @@
     </h2>
 
     <form action="/modify_exercise/<%= @the_exercise.id %>"  method="post" >
-      <div>
-        <label for="workout_id_box">
-          Workout
-        </label>
 
-        <input type="text" id="workout_id_box" name="query_workout_id" value="<%= @the_exercise.workout_id %>">
-      </div>
 
       <div>
         <label for="exercise_name_box">

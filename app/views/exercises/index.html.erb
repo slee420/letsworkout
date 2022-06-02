@@ -91,9 +91,6 @@ Sign up or sign in above to add your exercises!
   <div>
     <table border="1">
       <tr>
-        <th>
-          ID
-        </th>
 
         <th>
           User
@@ -137,10 +134,6 @@ Sign up or sign in above to add your exercises!
 
       <% @list_of_exercises.each do |an_exercise| %>
       <tr>
-        <td>
-          <%= an_exercise.id %>
-          <%#= an_exercise.workouts.muscle_target %>
-        </td>
 
         <td>
           <%= an_exercise.workout.owner.first_name.capitalize %>

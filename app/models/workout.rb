@@ -17,7 +17,7 @@ class Workout < ApplicationRecord
   validates(:date,:muscle_target,:quality,:location,:user_id, { :presence => true })
   validates :quality, numericality: { less_than_or_equal_to: 5 , greater_than_or_equal_to: 1}
   validates :quality, numericality: { only_integer: true}
-  validate :workout_cannot_be_in_the_future
+  #validate :workout_cannot_be_in_the_future
 
   def workout_cannot_be_in_the_future
     if :date.to_s > Date.today.to_s

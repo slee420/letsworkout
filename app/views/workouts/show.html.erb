@@ -1,7 +1,7 @@
 <div>
   <div>
     <h1>
-      <%= @the_workout.muscle_target %> Workout on <%= @the_workout.date.strftime("%b %d, %Y") %> Details
+      <%= @the_workout.muscle_target.capitalize %> Workout on <%= @the_workout.date.strftime("%b %d, %Y") %> Details
     </h1>
 
   
@@ -112,9 +112,7 @@
 <h2>Exercises</h2>
 <table border="1">
   <tr>
-    <th>
-      ID
-    </th>
+
 
     <th>
       Exercise Name
@@ -143,9 +141,6 @@
   <% @exercises.each do |exercise| %>
   <tr>
 
-    <td>
-      <%= exercise.id %>
-    </td>
 
     <td>
       <%= exercise.exercise_name %>

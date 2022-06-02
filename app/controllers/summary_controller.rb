@@ -8,6 +8,7 @@ class SummaryController < ApplicationController
     #the_id = params.fetch("path_id")
     #@exercises = Exercise.where({ :workout_id => the_id })
 
+    
 
     @list_of_workouts = @workouts.order({ :date => :desc })
     render({ :template => "summary/show.html.erb" })
