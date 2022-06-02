@@ -80,11 +80,15 @@
         </th>
 
         <th>
+          User
+        </th>
+
+        <th>
           Workout
         </th>
 
         <th>
-          Exercise name
+          Exercise Name
         </th>
 
         <th>
@@ -123,7 +127,13 @@
         </td>
 
         <td>
-          <%= an_exercise.workout_id %>
+          <%= an_exercise.workout.owner.first_name.capitalize %>
+          <%= an_exercise.workout.owner.last_name.capitalize %>
+
+        </td>
+
+        <td>
+          <%= an_exercise.workout.muscle_target %>: <%= an_exercise.workout.date %>
         </td>
 
         <td>
