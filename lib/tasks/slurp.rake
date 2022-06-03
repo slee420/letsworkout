@@ -3,27 +3,31 @@ namespace :slurp do
   task workout: :environment do
 
     Workout.destroy_all
+    Exercise.destroy_all
+    User.destroy_all
+    
 
-    require "csv"
-      csv_text = File.read(Rails.root.join("lib", "csvs", "workout.csv"))
-      csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
-      csv.each do |row|
-        #puts row.to_hash
-          w = Workout.new
 
-          w.id = row["id"]
-          w.user_id = row["user_id"]
-          w.date = Date.strptime(row["date"], "%d/%m/%Y")
+  #   require "csv"
+  #     csv_text = File.read(Rails.root.join("lib", "csvs", "workout.csv"))
+  #     csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
+  #     csv.each do |row|
+  #       #puts row.to_hash
+  #         w = Workout.new
+
+  #         w.id = row["id"]
+  #         w.user_id = row["user_id"]
+  #         w.date = Date.strptime(row["date"], "%d/%m/%Y")
           
-          w.muscle_target = row["Muscle Target"]
-          w.quality = row["Quality"]
-          w.location = row["Location"]
-          w.save
-          p w.errors.full_messages
-          puts "#{w.date}, #{w.muscle_target} saved"
-        end
+  #         w.muscle_target = row["Muscle Target"]
+  #         w.quality = row["Quality"]
+  #         w.location = row["Location"]
+  #         w.save
+  #         p w.errors.full_messages
+  #         puts "#{w.date}, #{w.muscle_target} saved"
+  #       end
         
-        puts "There are now #{Workout.count} rows in the workout table"
+  #       puts "There are now #{Workout.count} rows in the workout table"
   end
 
 end
@@ -32,7 +36,9 @@ namespace :slurp do
   desc "TODO"
   task exercise: :environment do
 
+    Workout.destroy_all
     Exercise.destroy_all
+    User.destroy_all
 
 require "csv"
 csv_text = File.read(Rails.root.join("lib", "csvs", "exercises.csv"))
